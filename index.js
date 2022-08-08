@@ -55,7 +55,7 @@ app.get('/dummy', async(req, res) => {
     addDummy();
     res.end('added');
 })
-app.listen(4001, () => {
+app.listen(prcocess.env.DB_PORT || 4001, () => {
     console.log('Server is running on port 4001');
 })
 
