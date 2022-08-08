@@ -34,6 +34,10 @@ app.use(express.urlencoded({extended: true }));
 // app.get('/', (req, res) => {
 //     res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
 // })
+
+app.get('/', (req, res) => {
+    res.send("hello");
+})
 app.use('/api', auth, router);
 app.get('/is-connected', (req, res) => {
     try {
