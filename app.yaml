@@ -1,1 +1,4 @@
 runtime: nodejs16
+
+beta_settings: 
+  cloud_sql_instances: euphoric-loop-358716:asia-southeast2:store-db

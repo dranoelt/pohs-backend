@@ -1,7 +1,9 @@
 import {Sequelize, DataTypes} from 'sequelize';
 import {HOST, USER, PASSWORD, DB, dialect, pool} from '../config/db.js';
-const sequelize = new Sequelize(DB, USER, PASSWORD, {
-    host: HOST,
+import * as dotenv from 'dotenv';
+dotenv.config();
+const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
+    host: process.env.INSTANCE_HOST,
     dialect: dialect,
     operatorsAliases: false,
     pool: {
